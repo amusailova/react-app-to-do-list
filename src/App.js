@@ -4,7 +4,6 @@ import "./App.css";
 //Importing components
 import Form from "./components/Form";
 import TodoList from "./components/TodoList";
-import logoPlans from "./components/logoPlans.png";
 
 export default function App() {
   // States
