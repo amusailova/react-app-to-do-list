@@ -1,26 +1,22 @@
-.App {
-  margin: 0 auto;
-  margin-top: 40px;
-  margin-bottom: 50px;
-  padding: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+small {
   text-align: center;
+  color: #575656;
+}
+body {
+  background-color: rgb(238, 238, 238);
+  color: white;
   font-family: "Poppins", sans-serif;
-  border-radius: 5px;
-  width: 700px;
-  height: 650px;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(-225deg, #cbbacc 0%, #fdebee 100%);
+  min-height: 100vh;
 }
-
-header h1 {
-  font-size: 28px;
-  color: #731b55;
-  font-family: "Rock Salt", cursive;
-}
-header img {
-  width: 140px;
-  background-image: url(./components/logoPlans.png);
+header {
+  font-size: 2rem;
+  color: #575656;
+  text-align: center;
 }
 
 header,
@@ -33,38 +29,45 @@ form {
 form input,
 form button {
   padding: 0.5rem;
-  font-size: 2rem;
+  font-size: 26px;
   border: none;
-  border-radius: 3px 0px 0px 3px;
   background: white;
 }
 form button {
-  color: #ea0e5a;
-  background: #f7fffe;
+  color: white;
+  background: #858484;
   cursor: pointer;
-  border-radius: 0px 3px 3px 0px;
   transition: all 0.3s ease;
 }
 form button:hover {
-  background: #ea0e5a;
-  color: white;
+  background: white;
+  color: #858484;
 }
-
 .todo-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+.todo-input {
+  margin-left: 40px;
+  border-radius: 5px 0px 0px 5px;
+}
+.todo-button {
+  background-color: #60b3d4;
+  color: white;
+  border-radius: 0px 5px 5px 0px;
+  margin-right: 12px;
+}
 .todo-list {
   min-width: 30%;
   list-style: none;
+  border-radius: 5px;
 }
 
 .todo {
   margin: 0.5rem;
   background: white;
-  font-size: 1.5rem;
+  font-size: 22px;
   color: black;
   display: flex;
   justify-content: space-between;
@@ -80,15 +83,15 @@ form button:hover {
 
 .trash-btn,
 .complete-btn {
-  background: #ea0e5a;
+  background: #ec5b5b;
   color: white;
   border: none;
-  padding: 1rem;
+  margin: 0 auto;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 22px;
 }
 .complete-btn {
-  background: rgb(11, 212, 162);
+  background: #858484;
 }
 .todo-item {
   padding: 0rem 0.5rem;
@@ -108,47 +111,11 @@ form button:hover {
   text-decoration: line-through;
   opacity: 0.5;
 }
-
-/*CUSTOM SELECTOR */
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  outline: 0;
-  box-shadow: none;
-  border: 0 !important;
-  background-image: none;
+.btn-group {
+  margin-right: -12px;
 }
-
-/* Custom Select */
-.select {
-  margin: 1rem;
-  position: relative;
-  overflow: hidden;
-  border-radius: 3px 0px 0px 3px;
+.coded-by {
+  text-align: center;
+  color: #575656;
+  font-size: 13px;
 }
-select {
-  color: #ea0e5a;
-  font-family: "Poppins", sans-serif;
-  cursor: pointer;
-  width: 12rem;
-}
-/* Arrow */
-.select::after {
-  content: "\25BC";
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1rem;
-  background: #ea0e5a;
-  cursor: pointer;
-  pointer-events: none;
-  border-radius: 0px 3px 3px 0px;
-}
-/* Transition */
-/*
-.select:hover::after {
-  transform: scale(1.5);
-}
-*/

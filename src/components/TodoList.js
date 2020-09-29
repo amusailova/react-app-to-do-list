@@ -4,7 +4,7 @@ import Todo from "./Todo";
 export default function TodoList({ todos, setTodos, filteredTodos }) {
   console.log(filteredTodos);
   return (
-    <div className="todo-container shadow">
+    <div className="todo-container">
       <ul className="todo-list">
         {filteredTodos.map((todo) => (
           <Todo

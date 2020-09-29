@@ -51,10 +51,9 @@ export default function App() {
     }
   };
   return (
-    <div className="App container-fluid shadow">
+    <div className="App container-fluid">
       <header className="row">
-        <h1 className="col-5">To-Do List</h1>
-        <img src={logoPlans} alt="logo" />
+        <h1 className="col">To-Do List</h1>
       </header>
       <Form
         setInputText={setInputText}
@@ -68,6 +67,12 @@ export default function App() {
         setTodos={setTodos}
         filteredTodos={filteredTodos}
       />
+      <div className="coded-by">
+        <a href="https://github.com/amusailova/react-app-to-do-list">
+          Open-source
+        </a>{" "}
+        code by Alyona Musailova
+      </div>
     </div>
   );
 }

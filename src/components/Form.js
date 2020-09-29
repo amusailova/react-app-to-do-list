@@ -25,26 +25,29 @@ export default function Form({
   return (
     <div className="Form">
       <form className="row">
-        <div className="col-8">
-          <input
-            value={inputText}
-            type="text"
-            className="todo-input shadow"
-            onChange={inputTextHandler}
-          />
-          <button
-            onClick={submitTodoHandler}
-            className="todo-button shadow"
-            type="submit"
-          >
-            <i className="fas fa-plus"></i>
-          </button>
-        </div>
-        <div className="select shadow">
+        <input
+          data-inline="true"
+          value={inputText}
+          type="text"
+          placeholder="New item..."
+          className="col-4 form-control todo-input shadow"
+          onChange={inputTextHandler}
+        />
+        <button
+          data-inline="true"
+          onClick={submitTodoHandler}
+          className="col-1 btn todo-button shadow"
+          type="submit"
+        >
+          <i class="fas fa-plus"></i>
+        </button>
+
+        <div className="select">
           <select
+            data-inline="true"
             onChange={statusHandler}
             name="todos"
-            className="filter-todo shadow"
+            className="col form-control shadow"
           >
             <option value="all">All</option>
             <option value="completed">Completed</option>
