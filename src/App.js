@@ -17,6 +17,10 @@ export default function App() {
   useEffect(() => {
     getLocalTodos();
   },);
+  // Save to Local
+  const saveLocalTodos = React.useCallback(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   // useEffect
   useEffect(() => {
@@ -38,10 +42,6 @@ export default function App() {
     saveLocalTodos();
   }, [todos, status, saveLocalTodos]);
 
-  // Save to Local
-  const saveLocalTodos = React.useCallback(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
 
   const getLocalTodos = () => {
     if (localStorage.getItem("todos") === null) {
