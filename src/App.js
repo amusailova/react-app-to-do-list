@@ -16,8 +16,8 @@ export default function App() {
   // Run once when the app starts
   useEffect(() => {
     getLocalTodos();
-  },);
-  // Save to Local
+  }, []);
+
   const saveLocalTodos = React.useCallback(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
@@ -42,7 +42,7 @@ export default function App() {
     saveLocalTodos();
   }, [todos, status, saveLocalTodos]);
 
-
+  // Save to Local
   const getLocalTodos = () => {
     if (localStorage.getItem("todos") === null) {
       localStorage.setItem("todos", JSON.stringify([]));
