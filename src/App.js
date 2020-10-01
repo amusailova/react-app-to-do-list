@@ -16,7 +16,8 @@ export default function App() {
   // Run once when the app starts
   useEffect(() => {
     getLocalTodos();
-  }, []);
+  },);
+
   // useEffect
   useEffect(() => {
     // Function
@@ -35,12 +36,13 @@ export default function App() {
     }
     filterHandler();
     saveLocalTodos();
-  }, [todos, status]);
+  }, [todos, status, saveLocalTodos]);
 
   // Save to Local
-  const saveLocalTodos = () => {
+  const saveLocalTodos = React.useCallback(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
-  };
+  }, [todos]);
+
   const getLocalTodos = () => {
     if (localStorage.getItem("todos") === null) {
       localStorage.setItem("todos", JSON.stringify([]));
@@ -49,6 +51,7 @@ export default function App() {
       setTodos(todoLocal);
     }
   };
+
   return (
     <div className="App container-fluid">
       <header className="row">
